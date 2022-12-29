@@ -7,7 +7,7 @@
     Title="Trang chủ"
     x:Class="SMSApp.Views.DashboardPage">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding Data}"  HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
+        <ListView ItemsSource="{x:Binding Data}"  HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
