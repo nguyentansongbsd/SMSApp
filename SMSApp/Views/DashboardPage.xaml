@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffimageloadingTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    Title="Trang chủ"
+    x:Class="SMSApp.Views.DashboardPage">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Data}"  HasUnevenRows="True" SelectionMode="None" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eeeeee" Padding="0,1">
+                            <StackLayout BackgroundColor="White" Padding="16,1">
+                                <Label Text="{Binding Phone}" FontSize="15" TextColor="#333333" FontAttributes="Bold"/>
+                                <Label Text="{Binding Content}" FontSize="15" TextColor="#444444"/>
+                            </StackLayout>
+
+                            <!--Content cho SmsDb-->
+                            <!--<Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="10" Padding="14" BackgroundColor="White">
+                                <ffimageloading:CachedImage Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Source="{Binding Avatar}" LoadingPlaceholder="image_placeholder.jpg" HeightRequest="40" WidthRequest="40" Aspect="AspectFill" VerticalOptions="Start">
+                                    <ffimageloading:CachedImage.Transformations>
+                                        <ffimageloadingTransformations:CircleTransformation/>
+                                    </ffimageloading:CachedImage.Transformations>
+                                </ffimageloading:CachedImage>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding CustomerName}" TextColor="#333333" VerticalOptions="Center"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding PhoneNumber}" TextColor="#333333" VerticalOptions="Center"/>
+                            </Grid>-->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
